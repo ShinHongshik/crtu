@@ -989,7 +989,7 @@ void proc_1ms_tic(void) // no intterupt
   DEC(gDbgFuseCnt);
 	DEC(gflcdsleep_n);
 	//watch-dog 
-  if(proc_1s % 2)
+  if(gSysTimer % 2)
 			gpio_put(HW_WATCHDOG, ON);
 	else 
 			gpio_put(HW_WATCHDOG, OFF);	
